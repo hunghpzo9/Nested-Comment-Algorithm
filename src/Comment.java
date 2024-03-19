@@ -2,6 +2,7 @@ public class Comment {
     private int id;
     private int postId;
     private String contents;
+    private int status;
     private int left;
     private int right;
     private int parentCommentId;
@@ -68,12 +69,21 @@ public class Comment {
         this.rootCommentId = rootCommentId;
     }
 
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
     @Override
     public String toString() {
         return "Comment{" +
                 "id=" + id +
                 ", postId=" + postId +
                 ", contents='" + contents + '\'' +
+                ", status=" + status +
                 ", left=" + left +
                 ", right=" + right +
                 ", parentCommentId=" + parentCommentId +
